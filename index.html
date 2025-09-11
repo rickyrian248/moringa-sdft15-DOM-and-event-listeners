@@ -17,11 +17,11 @@
         <form class="row g-3">
             <div class="col-auto">
                 <label for="staticEmail2" class="">Item</label>
-                <input type="text"  class="form-control" minimum="1" id="staticEmail2" value="e.g. Milk">
+                <input type="text"  class="form-control" minimum="1" id="staticEmail2" value="" placeholder="e.g. Milk">
             </div>
             <div class="col-auto">
                 <label for="inputPassword2" class="">QTY</label>
-                <input type="number" class="form-control" id="inputPassword2">
+                <input type="number" min="1" class="form-control" id="inputPassword2" value="1">
             </div>
             <div class="col-auto">
                 <button type="submit" class="btn btn-primary mb-3 mt-4">Add</button>
@@ -40,17 +40,8 @@
 
     </tr>
   </thead>
-  <tbody>
-    <tr>
-        <td>1</td>
-        <td>Milk</td>
-        <td>55</td>
-        <td>3</td>
-        <td>165</td>
-        <td>
-            <button class="btn btn-sm text-danger border border-danger mx-auto px-4">x</button>
-        </td>
-    </tr>
+  <tbody id="container">
+    
   </tbody>
 </table>
 
