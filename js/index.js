@@ -1,38 +1,21 @@
 /**
  * The 3 pillars of JS:
+ *  1. Manipulating the DOM
+ *  2. Handling Eventlisteners
+ *  3. Communicating with the server
  * 
  */
 
 
-const tableBody = document.getElementById("container")
 
-const items = [
-    {
-        id: 1,
-        name: "Milk",
-        price: 100,
-        qty: 2,
-        total: 0
-    },
-    {
-        id: 2,
-        name: "bread",
-        price: 50,
-        qty: 3,
-        total: 0
-    }
-]
 
-function removeItem(target){
-    // target.closest("tr").remove()
-    target.parentNode.parentNode.remove()
+
+
+function removeItem(target) {
+    target.closest("tr").remove()
 }
 
-for (item of items) {
-    const tr = document.createElement("tr") // Creating a table row for each item in array
-    tableBody.appendChild(tr) // adding the above row to the  table container
-
-    // creating colums for each row
+function createColumn(tr) {
     for (key in item) {
         const td = document.createElement("td")
 
@@ -42,14 +25,52 @@ for (item of items) {
             td.innerText = item[key]
         }
 
-        tr.appendChild(td) // adding cell to row
+        tr.appendChild(td)
     }
+}
 
-    // create button to remove items from cart
-    const tdAction = document.createElement("td")
-    tdAction.innerHTML = `<button onclick="removeItem(this)" class="btn btn-sm text-danger border border-danger mx-auto px-4">x</button>`
-    tr.appendChild(tdAction)
+function createRow(container, items) {
+    for (item of items) {
+        const tr = document.createElement("tr")
+        container.appendChild(tr)
+
+        createColumn(tr)
+
+        const btnRemove = document.createElement("td")
+        btnRemove.innerHTML = `
+        <button onclick="removeItem(this)" class="btn btn-sm text-danger border border-danger mx-auto px-3">x</button>
+    `
+
+        tr.appendChild(btnRemove)
+    }
+}
+
+
+function submitItem(){
+    const form = document.querySelector("#frm-add-item")
+    const container = document.querySelector("#container")
+    form.addEventListener("submit", function(event){
+        event.preventDefault()
+        let items = []
+     
+        items.push({
+            id: 1,
+            name: event.target.name.value,
+            price: Number(event.target.price.value),
+            qty:Number(event.target.qty.value),
+            total: 0
+        })
+        createRow(container, items)
+    })
 
 
 }
+
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    submitItem()
+})
+
+
+
 

@@ -10,40 +10,43 @@
 
 <body class="bg-warning">
 
-
-
     <div class="container">
 
-        <form class="row g-3">
+        <form class="row g-3" id="frm-add-item" method="GET">
             <div class="col-auto">
                 <label for="staticEmail2" class="">Item</label>
-                <input type="text"  class="form-control" minimum="1" id="staticEmail2" value="" placeholder="e.g. Milk">
+                <input type="text" name="name" class="form-control" minimum="1" id="staticEmail2" value="" placeholder="e.g. Milk">
             </div>
+
             <div class="col-auto">
+                <label for="staticPrice" class="">Price</label>
+                <input type="text" name="price" class="form-control" minimum="1" id="staticPrice" value="" placeholder="e.g. 55">
+            </div>
+
+            <div class="col-2">
                 <label for="inputPassword2" class="">QTY</label>
-                <input type="number" min="1" class="form-control" id="inputPassword2" value="1">
+                <input type="number" name="qty" min="1" class="form-control" id="inputPassword2" value="1">
             </div>
             <div class="col-auto">
                 <button type="submit" class="btn btn-primary mb-3 mt-4">Add</button>
             </div>
         </form>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">ITEM</th>
-      <th scope="col">PRICE</th>
-      <th scope="col">QTY</th>
-            <th scope="col">TOTAL</th>
-            <th>ACTION</th>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ITEM</th>
+                    <th scope="col">PRICE</th>
+                    <th scope="col">QTY</th>
+                    <th scope="col">TOTAL</th>
+                    <th>ACTION</th>
 
-    </tr>
-  </thead>
-  <tbody id="container">
-    
-  </tbody>
-</table>
+                </tr>
+            </thead>
+            <tbody id="container">
+            </tbody>
+        </table>
 
     </div>
 
