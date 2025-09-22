@@ -12,6 +12,8 @@
 1. Clone a repository:
 ```bash
    git clone git@github.com:rickyrian248/moringa-sdft15-DOM-and-event-listeners.git
+2. start-up
+
 # Live Link
 [Live Link](https://www.markdownguide.org/cheat-sheet/)
 # License
