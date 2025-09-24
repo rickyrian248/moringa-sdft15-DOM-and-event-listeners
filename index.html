@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FRIBS CBE EXPERTEE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="css/styles.css" rel="stylesheet" />
-</head>
+  </head>
+  <body class="bg-yellow-400">
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4 bg-white shadow-md">
+      <!-- Left side -->
+      <nav class="flex items-center gap-6">
+        <div class="text-xl font-bold">Logo</div>
+        <button class="hover:text-blue-500">Home</button>
+        <button class="hover:text-blue-500">What We Offer</button>
+        <button class="hover:text-blue-500">Contact Us</button>
+      </nav>
 
-<body class="bg-warning">
+      <!-- Right side -->
+      <div class="flex gap-4">
+        <button class="px-4 py-2 border rounded-lg hover:bg-blue-100">
+          Log In
+        </button>
+        <button
+          class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+        >
+          Sign Up
+        </button>
+      </div>
+    </header>
 
-    <div class="container">
+    <!-- Sections -->
+    <section class="home-section min-h-screen flex items-center justify-center">
+      <h1 class="text-4xl font-bold">Welcome to FRIBS CBE EXPERTEE</h1>
+    </section>
 
-        <form class="row g-3" id="frm-add-item" method="GET">
-            <div class="col-auto">
-                <label for="staticEmail2" class="">Item</label>
-                <input type="text" name="name" class="form-control" minimum="1" id="staticEmail2" value="" placeholder="e.g. Milk">
-            </div>
+    <section
+      class="offer-section min-h-screen bg-gray-100 flex items-center justify-center"
+    >
+      <h2 class="text-3xl font-semibold">Our Offerings</h2>
+    </section>
 
-            <div class="col-auto">
-                <label for="staticPrice" class="">Price</label>
-                <input type="text" name="price" class="form-control" minimum="1" id="staticPrice" value="" placeholder="e.g. 55">
-            </div>
-
-            <div class="col-2">
-                <label for="inputPassword2" class="">QTY</label>
-                <input type="number" name="qty" min="1" class="form-control" id="inputPassword2" value="1">
-            </div>
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-3 mt-4">Add</button>
-            </div>
-        </form>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">ITEM</th>
-                    <th scope="col">PRICE</th>
-                    <th scope="col">QTY</th>
-                    <th scope="col">TOTAL</th>
-                    <th>ACTION</th>
-
-                </tr>
-            </thead>
-            <tbody id="container">
-            </tbody>
-        </table>
-
-    </div>
-
+    <section
+      class="contact-section min-h-screen flex items-center justify-center"
+    >
+      <h2 class="text-3xl font-semibold">Contact Us</h2>
+    </section>
 
     <script src="js/index.js"></script>
-</body>
-
+  </body>
 </html>

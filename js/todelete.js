@@ -8,12 +8,14 @@ const tableBody = document.getElementById("container")
 
 const items = [
     {
-        id: 1,
-        name: "Milk",
-        price: 100,
-        qty: 2,
-        total: 0
-    },
+        id: 
+        Name: 
+        Email:
+        Phone number:
+        Password:
+        ID:
+    }
+    
     {
         id: 2,
         name: "bread",
